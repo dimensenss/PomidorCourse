@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36fd9c2d-27fc-4cf8-acf9-e2d5123dab63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PomidorCourse.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/store/logic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/store/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/store/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/store/tests/test_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/store/tests/test_logic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/store/tests/test_serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/store/urls.py" afterDir="false" />
+    <list default="true" id="36fd9c2d-27fc-4cf8-acf9-e2d5123dab63" name="Changes" comment="lesson 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/books/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/books/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/tests/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/tests/test_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/tests/test_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/tests/test_serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +43,10 @@
   "keyToString": {
     "Django Server.books.executor": "Run",
     "Django tests.Test: store.books.test_logic.executor": "Run",
+    "Django tests.Test: store.tests.test_api.APITestCase.executor": "Run",
+    "Django tests.Test: store.tests.test_api.APITestCase.test_get.executor": "Run",
+    "Django tests.Test: store.tests.test_api.BooksAPITestCase.executor": "Run",
+    "Django tests.Test: store.tests.test_api.BooksAPITestCase.test_search.executor": "Run",
     "Django tests.Test: store.tests.test_logic.LogicTestCase.executor": "Run",
     "Django tests.Test: store.tests.test_logic.LogicTestCase.test_plus.executor": "Run",
     "Python tests.Python tests for test_logic.LogicTestCase.executor": "Run",
@@ -59,7 +55,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/PROGRAMMING/PomidorCourse/books",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,6 +67,90 @@
   }
 }]]></component>
   <component name="RunManager" selected="Python.books_server">
+    <configuration name="Test: store.tests.test_api.APITestCase" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="PomidorCourse" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="store.tests.test_api.APITestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: store.tests.test_api.APITestCase.test_get" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="PomidorCourse" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="store.tests.test_api.APITestCase.test_get" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: store.tests.test_api.BooksAPITestCase" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="PomidorCourse" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="store.tests.test_api.BooksAPITestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: store.tests.test_api.BooksAPITestCase.test_search" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="PomidorCourse" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="store.tests.test_api.BooksAPITestCase.test_search" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="books_server" type="PythonConfigurationType" factoryName="Python">
       <module name="PomidorCourse" />
       <option name="ENV_FILES" value="" />
@@ -123,6 +203,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: store.tests.test_api.BooksAPITestCase.test_search" />
+        <item itemvalue="Django tests.Test: store.tests.test_api.BooksAPITestCase" />
+        <item itemvalue="Django tests.Test: store.tests.test_api.APITestCase" />
+        <item itemvalue="Django tests.Test: store.tests.test_api.APITestCase.test_get" />
         <item itemvalue="Python tests.Python tests for test_logic.LogicTestCase" />
       </list>
     </recent_temporary>
@@ -150,18 +234,45 @@
       <workItem from="1722332195189" duration="6000" />
       <workItem from="1722332218981" duration="115000" />
       <workItem from="1722332344567" duration="635000" />
-      <workItem from="1722333080829" duration="3193000" />
+      <workItem from="1722333080829" duration="3669000" />
+      <workItem from="1722433963243" duration="3000" />
+      <workItem from="1722435622600" duration="4050000" />
     </task>
+    <task id="LOCAL-00001" summary="lesson 2">
+      <option name="closed" value="true" />
+      <created>1722337388793</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722337388793</updated>
+    </task>
+    <task id="LOCAL-00002" summary="lesson 2">
+      <option name="closed" value="true" />
+      <created>1722337511133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722337511133</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lesson 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 2" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_books_test_logic.coverage" NAME="Test: store.books.test_logic Coverage Results" MODIFIED="1722333422617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_APITestCase_test_get.coverage" NAME="Test: store.tests.test_api.APITestCase.test_get Coverage Results" MODIFIED="1722436271037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_logic_LogicTestCase_test_plus.coverage" NAME="Test: store.tests.test_logic.LogicTestCase.test_plus Coverage Results" MODIFIED="1722332348330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/PomidorCourse$books_server.coverage" NAME="books_server Coverage Results" MODIFIED="1722332847160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:\PROGRAMMING\PomidorCourse\books" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$books_server.coverage" NAME="books_server Coverage Results" MODIFIED="1722440872262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:\PROGRAMMING\PomidorCourse\books" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase Coverage Results" MODIFIED="1722440257591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase_test_search.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase.test_search Coverage Results" MODIFIED="1722440866193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_logic_LogicTestCase.coverage" NAME="Test: store.tests.test_logic.LogicTestCase Coverage Results" MODIFIED="1722333127100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_APITestCase.coverage" NAME="Test: store.tests.test_api.APITestCase Coverage Results" MODIFIED="1722436289404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$.coverage" NAME=" Coverage Results" MODIFIED="1722333748079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/books/store/tests" />
   </component>
 </project>
