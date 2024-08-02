@@ -13,13 +13,13 @@ class BookSerializerTestCase(TestCase):
         serializer_data = BookSerializer([self.book_1, self.book_2], many=True).data
         expected_data = [
             {
-                'id': book_1.id,
+                'id': self.book_1.id,
                 'name': 'Book 799',
                 'price': '25.00',
                 'author_name': 'test',
             },
             {
-                'id': book_2.id,
+                'id': self.book_2.id,
                 'name': 'Book 2',
                 'price': '55.00',
                 'author_name': 'test2',
