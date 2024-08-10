@@ -1,3 +1,4 @@
+from django.db.models import Avg
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -11,7 +12,8 @@ from .serializers import BookSerializer, UserBookRelationSerializer
 
 
 class BookViewSet(ModelViewSet):
-    queryset = Book.objects.all()
+    queryset = Book.objects.all().annotate(
+        rating=Avg('userbookrelation__rate'), ).order_by('id')
     serializer_class = BookSerializer
     permission_classes = [IsOwnerOrStaffOrReadOnly]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
