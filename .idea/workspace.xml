@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36fd9c2d-27fc-4cf8-acf9-e2d5123dab63" name="Changes" comment="lesson 2">
+    <list default="true" id="36fd9c2d-27fc-4cf8-acf9-e2d5123dab63" name="Changes" comment="GitHub OAuth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books/books/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/books/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/books/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/store/tests/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/tests/test_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books/store/tests/test_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/tests/test_serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/urls.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/books/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -39,33 +41,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.books.executor": "Run",
-    "Django tests.Test: store.books.test_logic.executor": "Run",
-    "Django tests.Test: store.tests.test_api.APITestCase.executor": "Run",
-    "Django tests.Test: store.tests.test_api.APITestCase.test_get.executor": "Run",
-    "Django tests.Test: store.tests.test_api.BooksAPITestCase.executor": "Run",
-    "Django tests.Test: store.tests.test_api.BooksAPITestCase.test_search.executor": "Run",
-    "Django tests.Test: store.tests.test_logic.LogicTestCase.executor": "Run",
-    "Django tests.Test: store.tests.test_logic.LogicTestCase.test_plus.executor": "Run",
-    "Python tests.Python tests for test_logic.LogicTestCase.executor": "Run",
-    "Python tests.Python tests for test_logic.LogicTestCase.test_plus.executor": "Run",
-    "Python.books_server.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/PROGRAMMING/PomidorCourse/books",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.books.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: store.books.test_logic.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: store.tests.test_api.APITestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: store.tests.test_api.APITestCase.test_get.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: store.tests.test_api.BooksAPITestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: store.tests.test_api.BooksAPITestCase.test_search.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: store.tests.test_logic.LogicTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: store.tests.test_logic.LogicTestCase.test_plus.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_logic.LogicTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_logic.LogicTestCase.test_plus.executor&quot;: &quot;Run&quot;,
+    &quot;Python.books_server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PROGRAMMING/Django_Project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.books_server">
     <configuration name="Test: store.tests.test_api.APITestCase" type="DjangoTestsConfigurationType" temporary="true">
       <module name="PomidorCourse" />
@@ -236,7 +239,12 @@
       <workItem from="1722332344567" duration="635000" />
       <workItem from="1722333080829" duration="3669000" />
       <workItem from="1722433963243" duration="3000" />
-      <workItem from="1722435622600" duration="4050000" />
+      <workItem from="1722435622600" duration="4312000" />
+      <workItem from="1722520592699" duration="5627000" />
+      <workItem from="1722604606533" duration="2072000" />
+      <workItem from="1723104662556" duration="5000" />
+      <workItem from="1723104713080" duration="10000" />
+      <workItem from="1723280200176" duration="1846000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 2">
       <option name="closed" value="true" />
@@ -254,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722337511133</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Filters, Search, Ordering, unit tests">
+      <option name="closed" value="true" />
+      <created>1722442126073</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722442126073</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,13 +278,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lesson 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 2" />
+    <MESSAGE value="Filters, Search, Ordering, unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filters, Search, Ordering, unit tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_books_test_logic.coverage" NAME="Test: store.books.test_logic Coverage Results" MODIFIED="1722333422617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_APITestCase_test_get.coverage" NAME="Test: store.tests.test_api.APITestCase.test_get Coverage Results" MODIFIED="1722436271037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_logic_LogicTestCase_test_plus.coverage" NAME="Test: store.tests.test_logic.LogicTestCase.test_plus Coverage Results" MODIFIED="1722332348330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/PomidorCourse$books_server.coverage" NAME="books_server Coverage Results" MODIFIED="1722440872262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:\PROGRAMMING\PomidorCourse\books" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$books_server.coverage" NAME="books_server Coverage Results" MODIFIED="1723282933482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:\PROGRAMMING\PomidorCourse\books" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase Coverage Results" MODIFIED="1722440257591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase_test_search.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase.test_search Coverage Results" MODIFIED="1722440866193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_logic_LogicTestCase.coverage" NAME="Test: store.tests.test_logic.LogicTestCase Coverage Results" MODIFIED="1722333127100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

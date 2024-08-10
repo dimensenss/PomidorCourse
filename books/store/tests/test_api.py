@@ -6,7 +6,7 @@ from rest_framework.exceptions import ErrorDetail
 from rest_framework.reverse import reverse
 from rest_framework.test import APITestCase
 
-from store.models import Book
+from store.models import Book, UserBookRelation
 from store.serializers import BookSerializer
 
 
@@ -132,8 +132,6 @@ class BooksAPITestCase(APITestCase):
         self.book_1.refresh_from_db()
         self.assertEqual(data['price'], self.book_1.price)
 
-
-
     def test_delete(self):
         url = reverse('book-detail', args=(self.book_1.id,))
         self.client.force_login(self.user)
@@ -160,3 +158,36 @@ class BooksAPITestCase(APITestCase):
 
         response_get = self.client.get(url, content_type='application/json')
         self.assertEqual(response_get.status_code, status.HTTP_200_OK)
+
+
+class BooksRelationsAPITestCase(APITestCase):
+    def setUp(self):
+        self.user1 = User.objects.create(username='Test User1')
+        self.user2 = User.objects.create(username='Test User2')
+        self.book_1 = Book.objects.create(name='Book A', price=25, author_name='Author_A', owner=self.user1)
+        self.book_2 = Book.objects.create(name='Book B', price=55, author_name='Author_B')
+
+    def test_like(self):
+        url = reverse('userbookrelation-detail', args=(self.book_1.id,))
+        data = {
+            "like": True
+        }
+        json_data = json.dumps(data)
+        self.client.force_login(self.user1)
+        response = self.client.patch(url, data=json_data, content_type='application/json')
+        relation = UserBookRelation.objects.get(user=self.user1, book_id=self.book_1.id)
+
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertTrue(relation.like)
+
+        data = {
+            "in_bookmarks": True
+        }
+        json_data = json.dumps(data)
+        response = self.client.patch(url, data=json_data, content_type='application/json')
+        relation = UserBookRelation.objects.get(user=self.user1, book=self.book_1)
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertTrue(relation.in_bookmarks)
+
+
+
