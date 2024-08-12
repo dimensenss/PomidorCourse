@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36fd9c2d-27fc-4cf8-acf9-e2d5123dab63" name="Changes" comment="add UserBookRelationAPI, add test cases">
+    <list default="true" id="36fd9c2d-27fc-4cf8-acf9-e2d5123dab63" name="Changes" comment="annotating, add test cases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/books/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/books/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/books/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/store/tests/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/tests/test_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/store/tests/test_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/store/tests/test_serializers.py" afterDir="false" />
@@ -68,7 +72,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Django tests.Test: store.tests.test_api.BooksAPITestCase">
+  <component name="RunManager" selected="Python.books_server">
     <configuration name="Test: store.tests.test_api.APITestCase" type="DjangoTestsConfigurationType" temporary="true">
       <module name="PomidorCourse" />
       <option name="ENV_FILES" value="" />
@@ -251,7 +255,9 @@
       <workItem from="1723280200176" duration="4198000" />
       <workItem from="1723301317240" duration="1857000" />
       <workItem from="1723303413404" duration="318000" />
-      <workItem from="1723310041329" duration="666000" />
+      <workItem from="1723310041329" duration="781000" />
+      <workItem from="1723364132093" duration="2000" />
+      <workItem from="1723470037457" duration="5894000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 2">
       <option name="closed" value="true" />
@@ -285,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723284216291</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="annotating, add test cases">
+      <option name="closed" value="true" />
+      <created>1723310809035</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723310809035</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,14 +309,15 @@
     <MESSAGE value="lesson 2" />
     <MESSAGE value="Filters, Search, Ordering, unit tests" />
     <MESSAGE value="add UserBookRelationAPI, add test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="add UserBookRelationAPI, add test cases" />
+    <MESSAGE value="annotating, add test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="annotating, add test cases" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_books_test_logic.coverage" NAME="Test: store.books.test_logic Coverage Results" MODIFIED="1722333422617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_APITestCase_test_get.coverage" NAME="Test: store.tests.test_api.APITestCase.test_get Coverage Results" MODIFIED="1722436271037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_logic_LogicTestCase_test_plus.coverage" NAME="Test: store.tests.test_logic.LogicTestCase.test_plus Coverage Results" MODIFIED="1722332348330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/PomidorCourse$books_server.coverage" NAME="books_server Coverage Results" MODIFIED="1723282933482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:\PROGRAMMING\PomidorCourse\books" />
-    <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase Coverage Results" MODIFIED="1723302327363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$books_server.coverage" NAME="books_server Coverage Results" MODIFIED="1723473178311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:\PROGRAMMING\PomidorCourse\books" />
+    <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase Coverage Results" MODIFIED="1723470262251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase_test_search.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase.test_search Coverage Results" MODIFIED="1722440866193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_logic_LogicTestCase.coverage" NAME="Test: store.tests.test_logic.LogicTestCase Coverage Results" MODIFIED="1722333127100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/PomidorCourse$Test__store_tests_test_api_BooksAPITestCase_test_delete_reader_like_behaviour.coverage" NAME="Test: store.tests.test_api.BooksAPITestCase.test_delete_reader_like_behaviour Coverage Results" MODIFIED="1723302309167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

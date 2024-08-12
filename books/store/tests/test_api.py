@@ -1,7 +1,7 @@
 import json
 
 from django.contrib.auth.models import User
-from django.db.models import Avg
+from django.db.models import Avg, Count, Q, F
 from rest_framework import status
 from rest_framework.exceptions import ErrorDetail
 from rest_framework.reverse import reverse
@@ -21,8 +21,12 @@ class BooksAPITestCase(APITestCase):
     def test_get(self):
         url = reverse('book-list')
         response = self.client.get(url)
-        books = Book.objects.filter(id__in=[self.book_1.id, self.book_2.id, self.book_3.id]).annotate(
-            rating=Avg('userbookrelation__rate')).order_by('id')
+        books = Book.objects.all().annotate(
+            annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
+            owner_name=F('owner__username'),
+            rating=Avg('userbookrelation__rate'),
+        ).prefetch_related(
+            'readers').order_by('id')
         serializer = BookSerializer(books, many=True)
 
         self.assertEqual(status.HTTP_200_OK, response.status_code)
@@ -32,7 +36,11 @@ class BooksAPITestCase(APITestCase):
         url = reverse('book-list')
         response = self.client.get(url, data={'price': '55.00'})
         books = Book.objects.filter(id__in=[self.book_2.id]).annotate(
-            rating=Avg('userbookrelation__rate'), ).order_by('id')
+            annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
+            owner_name=F('owner__username'),
+            rating=Avg('userbookrelation__rate'),
+        ).prefetch_related(
+            'readers').order_by('id')
         serializer = BookSerializer(books, many=True)
 
         self.assertEqual(status.HTTP_200_OK, response.status_code)
@@ -42,7 +50,11 @@ class BooksAPITestCase(APITestCase):
         url = reverse('book-list')
         response = self.client.get(url, data={'search': 'Author_B'})
         books = Book.objects.filter(id__in=[self.book_2.id, self.book_3.id]).annotate(
-            rating=Avg('userbookrelation__rate')).order_by('id')
+            annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
+            owner_name=F('owner__username'),
+            rating=Avg('userbookrelation__rate'),
+        ).prefetch_related(
+            'readers').order_by('id')
         serializer = BookSerializer(books, many=True)
 
         self.assertEqual(status.HTTP_200_OK, response.status_code)
@@ -56,10 +68,18 @@ class BooksAPITestCase(APITestCase):
         response_sort_by_desc_author = self.client.get(url, data={'ordering': '-author_name'})
 
         books_1 = Book.objects.filter(id__in=[self.book_1.id, self.book_2.id, self.book_3.id]).annotate(
-            rating=Avg('userbookrelation__rate')).order_by('id')
+            annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
+            owner_name=F('owner__username'),
+            rating=Avg('userbookrelation__rate'),
+        ).prefetch_related(
+            'readers').order_by('id')
 
         books_2 = Book.objects.filter(id__in=[self.book_1.id, self.book_2.id, self.book_3.id]).annotate(
-            rating=Avg('userbookrelation__rate')).order_by('-id')
+            annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
+            owner_name=F('owner__username'),
+            rating=Avg('userbookrelation__rate'),
+        ).prefetch_related(
+            'readers').order_by('-id')
 
         excepted_data_sort_by_price = BookSerializer(books_1, many=True)
         excepted_data_sort_by_desc_price = BookSerializer(books_2, many=True)
@@ -215,9 +235,20 @@ class BooksRelationsAPITestCase(APITestCase):
         self.assertEqual(status.HTTP_200_OK, response.status_code)
         self.assertTrue(relation.like)
 
-        book_serializer = BookSerializer(self.book_1)
-        self.assertEqual(1, book_serializer.data['likes_count'])
+        # Аннотируем книгу перед сериализацией
+        book = Book.objects.filter(id=self.book_1.id).annotate(
+            annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True))
+        ).first()
+
+        book_serializer = BookSerializer(book)
+        self.assertEqual(1, book_serializer.data['annotated_likes'])
 
         self.user1.delete()
-        book_serializer = BookSerializer(self.book_1)
-        self.assertEqual(0, book_serializer.data['likes_count'])
+
+        # Повторяем аннотацию после удаления пользователя
+        book = Book.objects.filter(id=self.book_1.id).annotate(
+            annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True))
+        ).first()
+
+        book_serializer = BookSerializer(book)
+        self.assertEqual(0, book_serializer.data['annotated_likes'])
