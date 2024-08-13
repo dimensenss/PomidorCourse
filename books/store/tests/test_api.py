@@ -24,7 +24,6 @@ class BooksAPITestCase(APITestCase):
         books = Book.objects.all().annotate(
             annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
             owner_name=F('owner__username'),
-            rating=Avg('userbookrelation__rate'),
         ).prefetch_related(
             'readers').order_by('id')
         serializer = BookSerializer(books, many=True)
@@ -38,7 +37,6 @@ class BooksAPITestCase(APITestCase):
         books = Book.objects.filter(id__in=[self.book_2.id]).annotate(
             annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
             owner_name=F('owner__username'),
-            rating=Avg('userbookrelation__rate'),
         ).prefetch_related(
             'readers').order_by('id')
         serializer = BookSerializer(books, many=True)
@@ -52,7 +50,6 @@ class BooksAPITestCase(APITestCase):
         books = Book.objects.filter(id__in=[self.book_2.id, self.book_3.id]).annotate(
             annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
             owner_name=F('owner__username'),
-            rating=Avg('userbookrelation__rate'),
         ).prefetch_related(
             'readers').order_by('id')
         serializer = BookSerializer(books, many=True)
@@ -70,14 +67,12 @@ class BooksAPITestCase(APITestCase):
         books_1 = Book.objects.filter(id__in=[self.book_1.id, self.book_2.id, self.book_3.id]).annotate(
             annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
             owner_name=F('owner__username'),
-            rating=Avg('userbookrelation__rate'),
         ).prefetch_related(
             'readers').order_by('id')
 
         books_2 = Book.objects.filter(id__in=[self.book_1.id, self.book_2.id, self.book_3.id]).annotate(
             annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
             owner_name=F('owner__username'),
-            rating=Avg('userbookrelation__rate'),
         ).prefetch_related(
             'readers').order_by('-id')
 

@@ -15,7 +15,6 @@ class BookViewSet(ModelViewSet):
     queryset = Book.objects.all().annotate(
         annotated_likes=Count('userbookrelation__like', filter=Q(userbookrelation__like=True)),
         owner_name=F('owner__username'),
-        rating=Avg('userbookrelation__rate'),
     ).prefetch_related(
         'readers').order_by('id')
 
